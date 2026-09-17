@@ -332,6 +332,84 @@ h4 {
   margin-bottom: 0;
 }
 
+#jett {
+  background-image: url("https://t.ctcdn.com.br/JEllLF5id4OQSxDlRIDZnIueqNc=/1024x0/smart/filters:format(webp)/i592118.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#reyna {
+  background-image: url("https://t.ctcdn.com.br/mRgKyUPy2_R3INT-2DC7o2m18BY=/1024x0/smart/filters:format(webp)/i592115.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#phoenix {
+  background-image: url("https://t.ctcdn.com.br/AKSpevcdmPd-UOpeMzAngg6F59U=/1024x0/smart/filters:format(webp)/i592119.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#sage {
+  background-image: url("https://t.ctcdn.com.br/lb_MZWGBwFrUdsHZtaQTUCgcxVA=/1024x0/smart/filters:format(webp)/i592186.jpeg");  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#killjoy {
+  background-image: url("https://t.ctcdn.com.br/xx8pqVCVyyCbLQ-dm2dHeuryZ48=/1024x0/smart/filters:format(webp)/i592128.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#cypher {
+  background-image: url("https://t.ctcdn.com.br/wGpkiSxWzwCH5lLTxCKk2Omodmk=/1024x0/smart/filters:format(webp)/i592126.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#sova {
+  background-image: url("https://t.ctcdn.com.br/_LngJcsor4Jkwcnh6xivBNCiUMM=/1024x0/smart/filters:format(webp)/i592185.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#breach {
+  background-image: url("https://t.ctcdn.com.br/-1vI0vcdz5WtH8m3FSNDy0vCQoo=/1024x0/smart/filters:format(webp)/i592111.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#skye {
+  background-image: url("https://t.ctcdn.com.br/TlXm016M_H3HhRtmQcWDn4g_has=/1024x0/smart/filters:format(webp)/i592108.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#viper {
+  background-image: url("https://t.ctcdn.com.br/Zvh-tmRi6rRFxtmNh3CuSdIQkBE=/1024x0/smart/filters:format(webp)/i592135.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#omen {
+  background-image: url("https://t.ctcdn.com.br/4kw02l-EWHhoE2KVcIwjlf2fCSk=/1024x0/smart/filters:format(webp)/i592131.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#astra {
+  background-image: url("https://t.ctcdn.com.br/wOVRxebhhY6GKgrCOJWKFGfBX6c=/1024x0/smart/filters:format(webp)/i592106.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 /* Card de mapa */
 .map-card {
   background-color: var(--bg-surface-alt);
@@ -369,6 +447,48 @@ h4 {
 
 .map-card ul li {
   margin-bottom: 0.3rem;
+}
+
+#bind {
+  background-image: url("https://s2-ge.glbimg.com/iGfFJE3OGnDbnLGPs-VOfGeIZig=/0x0:930x522/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/g/8/9EWYsQQgWYrFpGZEsggQ/bind.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#haven {
+  background-image: url("https://s2-ge.glbimg.com/_QR4wNFHijGTvOWi0kxmPHseeHs=/0x0:930x522/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/V/x/vHE7iPRwWA6Mz3glAUXQ/haven.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#split {
+  background-image: url("https://noticias.maisesports.com.br/wp-content/uploads/2026/05/valorant-split-1-1119x630.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#ascent {
+  background-image: url("https://noticias.maisesports.com.br/wp-content/uploads/2024/07/mapa-ascent-valorant-1-1120x630.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#icebox {
+  background-image: url("https://noticias.maisesports.com.br/wp-content/uploads/2024/07/mapa-valorant-icebox-1120x630.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#lotus {
+  background-image: url("https://noticias.maisesports.com.br/wp-content/uploads/2023/01/valorant-lotus-800x433.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* -----------------------------
