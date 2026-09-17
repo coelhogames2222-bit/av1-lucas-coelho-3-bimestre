@@ -1,142 +1,639 @@
-```css
+
+:root {
+  --bg-primary:      #0F1923;
+  --bg-surface:      #17212C;
+  --bg-surface-alt:  #1E2A36;
+  --border-subtle:   #2B3947;
+
+  --accent-red:      #FF4655;
+  --accent-red-dark: #C43848;
+  --accent-line:     #4A5C6B;
+
+  --text-primary:    #ECE8E1;
+  --text-muted:      #90A0AC;
+
+  --font-display: "Rajdhani", Arial, sans-serif;
+  --font-body:    "Barlow", Arial, sans-serif;
+}
+
+/* -----------------------------
+   2. Reset leve e base tipográfica
+   ----------------------------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
+  font-family: var(--font-body), Arial, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 
-header {
-    background-color: #222;
-    color: white;
-    padding: 20px;
-    text-align: center;
+a {
+  color: var(--accent-red);
+  text-decoration: none;
 }
 
-header h1 {
-    margin-bottom: 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    padding: 8px;
-}
-
-nav a:hover {
-    background-color: #555;
-    border-radius: 5px;
-}
-
-main {
-    width: 90%;
-    max-width: 1000px;
-    margin: 30px auto;
-}
-
-section {
-    background-color: white;
-    padding: 30px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px #ccc;
-}
-
-h2 {
-    margin-bottom: 15px;
+a:hover {
+  color: #ff7885;
 }
 
 p {
-    line-height: 1.6;
+  margin-bottom: 1.2rem;
+  color: var(--text-muted);
+  max-width: 62ch;
 }
 
-.botao {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #222;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+/* -----------------------------
+   3. Hierarquia tipográfica (h1 a h4)
+   ----------------------------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display), Arial, sans-serif;
+  color: var(--text-primary);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
 }
 
-.botao:hover {
-    background-color: #555;
+h1 {
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
-.cards {
-    display: flex;
-    gap: 20px;
+h2 {
+  font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+  text-transform: uppercase;
 }
 
-.card {
-    flex: 1;
-    background-color: #eee;
-    padding: 20px;
-    border-radius: 8px;
+h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.01em;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-red);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
-label {
-    margin-top: 15px;
-    margin-bottom: 5px;
+.text-lead {
+  font-family: var(--font-body), Arial, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 60ch;
 }
 
-input,
-textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+.text-center-custom {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-textarea {
-    height: 120px;
-    resize: none;
+/* -----------------------------
+   4. Navbar
+   ----------------------------- */
+.navbar-vlr {
+  background-color: rgba(15, 25, 35, 0.96);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
 }
 
-button {
-    margin-top: 20px;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: #222;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+.navbar-brand-vlr {
+  font-family: var(--font-display), Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-primary) !important;
 }
 
-button:hover {
-    background-color: #555;
+.navbar-brand-vlr span {
+  color: var(--accent-red);
 }
 
-footer {
-    background-color: #222;
-    color: white;
+.nav-link-vlr {
+  font-family: var(--font-display), Arial, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted) !important;
+  padding: 0.5rem 1rem !important;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav-link-vlr:hover,
+.nav-link-vlr.active {
+  color: var(--text-primary) !important;
+  border-bottom-color: var(--accent-red);
+}
+
+.navbar-toggler {
+  border: 1px solid var(--border-subtle);
+}
+
+/* -----------------------------
+   5. Hero
+   ----------------------------- */
+.hero {
+  position: relative;
+  background: linear-gradient(120deg, var(--bg-primary) 55%, var(--bg-surface) 55%);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 8%;
+  width: 6px;
+  height: 100%;
+  background: var(--accent-red);
+  transform: skewX(-12deg);
+  opacity: 0.85;
+}
+
+.hero-eyebrow {
+  color: var(--accent-red);
+  font-family: var(--font-display), Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  font-size: 0.9rem;
+}
+
+.hero h1 {
+  margin-top: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero .text-lead {
+  margin-bottom: 2rem;
+}
+
+/* Botões */
+.btn-vlr {
+  font-family: var(--font-display), Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.9rem;
+  border: none;
+  clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+}
+
+.btn-vlr-primary {
+  background-color: var(--accent-red);
+  color: #0F1923;
+}
+
+.btn-vlr-primary:hover {
+  background-color: #ff7885;
+  color: #0F1923;
+}
+
+.btn-vlr-outline {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--accent-line);
+}
+
+.btn-vlr-outline:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-red);
+}
+
+/* -----------------------------
+   6. Seções gerais
+   ----------------------------- */
+.section {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.section-alt {
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.section-heading {
+  margin-bottom: 2.8rem;
+}
+
+.section-heading h4 {
+  margin-bottom: 0.6rem;
+}
+
+/* -----------------------------
+   7. Cards (recortados, sem cantos arredondados padrão)
+   ----------------------------- */
+.card-vlr {
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-line);
+  padding: 1.8rem 1.6rem;
+  height: 100%;
+  transition: border-left-color 0.15s ease, transform 0.15s ease;
+}
+
+.card-vlr:hover {
+  border-left-color: var(--accent-red);
+  transform: translateX(4px);
+}
+
+.card-vlr h3 {
+  margin-bottom: 0.6rem;
+}
+
+.card-vlr p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.card-vlr .tag {
+  display: inline-block;
+  font-family: var(--font-display), Arial, sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-red);
+  border: 1px solid var(--accent-red-dark);
+  padding: 0.15rem 0.6rem;
+  margin-bottom: 0.9rem;
+}
+
+/* Card de agente com imagem-placeholder (bloco de cor + inicial) */
+.agent-card {
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  height: 100%;
+  transition: border-color 0.15s ease;
+}
+
+.agent-card:hover {
+  border-color: var(--accent-red);
+}
+
+.agent-portrait {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--bg-surface) 0%, #0c141c 100%);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.agent-portrait span {
+  font-family: var(--font-display), Arial, sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--border-subtle);
+}
+
+.agent-body {
+  padding: 1.2rem 1.4rem 1.5rem;
+}
+
+.agent-role {
+  font-family: var(--font-display), Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-red);
+  margin-bottom: 0.3rem;
+}
+
+.agent-body h3 {
+  margin-bottom: 0.5rem;
+}
+
+.agent-body p {
+  font-size: 0.92rem;
+  margin-bottom: 0;
+}
+
+/* Card de mapa */
+.map-card {
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-subtle);
+  padding: 1.6rem;
+  height: 100%;
+}
+
+.map-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.8rem;
+}
+
+.map-card-top h3 {
+  margin-bottom: 0;
+}
+
+.map-code {
+  font-family: var(--font-display), Arial, sans-serif;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+.map-card ul {
+  padding-left: 1.1rem;
+  margin-bottom: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.map-card ul li {
+  margin-bottom: 0.3rem;
+}
+
+/* -----------------------------
+   8. Estatísticas / faixa numérica
+   ----------------------------- */
+.stat-block {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-left: 1px solid var(--border-subtle);
+}
+
+.stat-block .stat-number {
+  font-family: var(--font-display), Arial, sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--accent-red);
+  line-height: 1;
+}
+
+.stat-block .stat-label {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* -----------------------------
+   9. Página de formulário (inscrição / contato)
+   ----------------------------- */
+
+/* Painel que envolve o formulário inteiro */
+.form-panel {
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-subtle);
+  border-top: 3px solid var(--accent-red);
+  padding: 2.4rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .form-panel {
+    padding: 3rem 3rem;
+  }
+}
+
+/* Agrupamento de campo (label + input) */
+.form-vlr .field-group {
+  margin-bottom: 1.6rem;
+}
+
+.form-vlr label {
+  display: block;
+  font-family: var(--font-display), Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.form-vlr .field-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+  margin-bottom: 0;
+}
+
+/* Inputs, selects e textarea compartilham a mesma base visual */
+.form-vlr .form-control,
+.form-vlr .form-select {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  border-radius: 0;
+  padding: 0.75rem 0.9rem;
+  font-family: var(--font-body), Arial, sans-serif;
+  font-size: 0.95rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-vlr textarea.form-control {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-vlr .form-control::placeholder {
+  color: #5C6B77;
+}
+
+.form-vlr .form-control:focus,
+.form-vlr .form-select:focus {
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  border-color: var(--accent-red);
+  box-shadow: 0 0 0 3px rgba(255, 70, 85, 0.2);
+  outline: none;
+}
+
+/* Select: seta customizada para combinar com o tema escuro */
+.form-vlr .form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23FF4655' d='M8 11 3 6h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  background-size: 12px;
+}
+
+.form-vlr .form-select option {
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+}
+
+/* Checkbox de termos, no estilo do resto do site (sem cantos arredondados) */
+.form-vlr .form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 1.8rem;
+}
+
+.form-vlr .form-check-input {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.2rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--accent-line);
+  border-radius: 0;
+  flex-shrink: 0;
+}
+
+.form-vlr .form-check-input:checked {
+  background-color: var(--accent-red);
+  border-color: var(--accent-red);
+}
+
+.form-vlr .form-check-input:focus {
+  box-shadow: 0 0 0 3px rgba(255, 70, 85, 0.2);
+  border-color: var(--accent-red);
+}
+
+.form-vlr .form-check-label {
+  font-family: var(--font-body), Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--text-muted);
+}
+
+.form-vlr .form-check-label a {
+  color: var(--accent-red);
+}
+
+/* Estados de validação */
+.form-vlr .form-control.is-invalid,
+.form-vlr .form-select.is-invalid {
+  border-color: var(--accent-red);
+}
+
+.form-vlr .invalid-feedback {
+  font-size: 0.8rem;
+  color: var(--accent-red);
+  margin-top: 0.4rem;
+}
+
+.form-vlr .form-control.is-valid,
+.form-vlr .form-select.is-valid {
+  border-color: #3DBE7A;
+}
+
+/* Botão de envio ocupando a largura do campo em telas pequenas */
+.form-vlr button[type="submit"] {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .form-vlr button[type="submit"] {
+    width: auto;
+  }
+}
+
+/* Mensagem de confirmação de envio */
+.form-success {
+  display: none;
+  background-color: rgba(61, 190, 122, 0.12);
+  border: 1px solid #3DBE7A;
+  border-left: 3px solid #3DBE7A;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.8rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.form-success.is-visible {
+  display: block;
+}
+
+/* -----------------------------
+   10. Footer
+   ----------------------------- */
+.footer-vlr {
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.footer-vlr h4 {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.footer-vlr ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-vlr ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-vlr a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-vlr a:hover {
+  color: var(--accent-red);
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* -----------------------------
+   11. Ajustes responsivos finos (mobile)
+   ----------------------------- */
+@media (max-width: 767.98px) {
+  .hero {
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero .text-lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero::after {
+    display: none;
+  }
+
+  .stat-block {
+    border-left: none;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
-
-@media (max-width: 700px) {
-
-    .cards {
-        flex-direction: column;
-    }
-
-    nav a {
-        display: block;
-        margin: 5px;
-    }
-}
-```
